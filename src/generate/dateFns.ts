@@ -42,7 +42,7 @@ const localeParse = (format: string) => {
 const generateConfig: GenerateConfig<Date> = {
   // get
   getNow: () => new Date(),
-  getFixedDate: string => new Date(string),
+  getFixedDate: string => parseDate(string, 'yyyy-MM-dd'),
   getEndDate: date => endOfMonth(date),
   getWeekDay: date => getDay(date),
   getYear: date => getYear(date),
